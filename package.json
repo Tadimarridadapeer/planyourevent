@@ -1,0 +1,17 @@
+{
+  "name": "planmyevent-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --recursive run dev",
+    "build": "pnpm --recursive run build",
+    "lint": "pnpm --recursive run lint",
+    "typecheck": "pnpm --recursive run typecheck",
+    "db:generate": "pnpm --filter database db:generate",
+    "db:push": "pnpm --filter database db:push",
+    "db:seed": "pnpm --filter database db:seed"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
