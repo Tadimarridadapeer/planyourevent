@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "nest start --watch",
-    "build": "nest build",
+    "build": "npx prisma generate --schema=./prisma/schema.prisma && nest build",
     "start": "node dist/main.js",
     "typecheck": "tsc --noEmit",
-    "vercel-build": "npx prisma generate --schema=../../packages/database/prisma/schema.prisma && nest build"
+    "vercel-build": "npx prisma generate --schema=./prisma/schema.prisma && nest build"
   },
   "dependencies": {
     "@nestjs/common": "^10.4.15",
@@ -17,6 +17,7 @@
     "@nestjs/platform-express": "^10.4.15",
     "@nestjs/swagger": "^8.1.1",
     "@planmyevent/database": "workspace:*",
+    "@prisma/client": "^6.4.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "express": "^4.21.2",
