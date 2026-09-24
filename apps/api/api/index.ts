@@ -3,6 +3,7 @@ import { AppModule } from '../src/app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ExpressAdapter } from '@nestjs/platform-express';
+import { AllExceptionsFilter } from '../src/all-exceptions.filter';
 import express from 'express';
 
 const expressApp = express();
@@ -19,6 +20,8 @@ async function bootstrap() {
       origin: true,
       credentials: true,
     });
+
+    app.useGlobalFilters(new AllExceptionsFilter());
 
     app.useGlobalPipes(
       new ValidationPipe({

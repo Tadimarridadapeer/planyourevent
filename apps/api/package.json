@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nest start --watch",
-    "build": "npx prisma generate --schema=../../packages/database/prisma/schema.prisma && nest build",
+    "build": "nest build",
     "start": "node dist/main.js",
     "typecheck": "tsc --noEmit",
     "vercel-build": "npx prisma generate --schema=../../packages/database/prisma/schema.prisma && nest build"
