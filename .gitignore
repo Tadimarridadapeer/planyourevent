@@ -9,3 +9,4 @@ build
 *.db
 !packages/database/prisma/seed-data.db
 *.db-journal
+*.tsbuildinfo
