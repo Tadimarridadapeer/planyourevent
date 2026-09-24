@@ -7,4 +7,5 @@ build
 *.log
 .DS_Store
 *.db
+!packages/database/prisma/seed-data.db
 *.db-journal

@@ -9,7 +9,8 @@
     "typecheck": "pnpm --recursive run typecheck",
     "db:generate": "pnpm --filter database db:generate",
     "db:push": "pnpm --filter database db:push",
-    "db:seed": "pnpm --filter database db:seed"
+    "db:seed": "pnpm --filter database db:seed",
+    "vercel-build": "pnpm --filter @planmyevent/database run build && pnpm --filter @planmyevent/api run build"
   },
   "devDependencies": {
     "typescript": "^5.7.2"
