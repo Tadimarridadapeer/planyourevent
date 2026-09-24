@@ -13,6 +13,7 @@
     "vercel-build": "pnpm --filter @planmyevent/database run build && pnpm --filter @planmyevent/api run build"
   },
   "devDependencies": {
+    "prisma": "^6.4.1",
     "typescript": "^5.7.2"
   }
 }
